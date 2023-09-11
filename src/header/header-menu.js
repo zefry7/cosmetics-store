@@ -247,7 +247,7 @@ function HeaderMenu({ fun, w }) {
                             <img className="header-content__picture" src={img1} alt="" />
                         </div>
                         <div class="line-two__wrapper-picture">
-                            <Link to="/wishes"><img className="header-content__picture" src={img2} alt="" /></Link>
+                            <Link to="wishes"><img className="header-content__picture" src={img2} alt="" /></Link>
                         </div>
                         <div class="line-two__wrapper-picture">
                             <img className="header-content__picture" src={img3} alt="" onClick={() => { clickBasket(); ttt(); changeTotalSum(); correctInfo() }} />
@@ -367,16 +367,16 @@ function HeaderMenu({ fun, w }) {
                         <h4 class="footer-top__title">Информация</h4>
                         <ul class="footer-top__list">
                             <li class="footer-top__item">
-                                <Link to="/club">Клуб косметологов</Link>
+                                <Link to="club">Клуб косметологов</Link>
                             </li>
                             <li class="footer-top__item">
-                                <Link to="/delivery">Доставка и оплата</Link>
+                                <Link to="delivery">Доставка и оплата</Link>
                             </li>
                             <li class="footer-top__item">
-                                <Link to="/contacts">Контакты</Link>
+                                <Link to="contacts">Контакты</Link>
                             </li>
                             <li class="footer-top__item">
-                                <Link to="/blog">Блог</Link>
+                                <Link to="blog">Блог</Link>
                             </li>
                         </ul>
                     </div>
