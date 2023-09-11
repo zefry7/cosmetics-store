@@ -261,7 +261,7 @@ body {
   height: 24px !important;
   width: 24px !important;
   display: inline-block;
-  /* background-image: url(../img/long_right.svg) !important; */
+  background-image: url(./img/long_right.svg) !important; 
   color: black;
 }
 
