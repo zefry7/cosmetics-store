@@ -1,18 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Product({ data, wishesList, funBasket, funWishes, w }) {
-    let urlSplit = window.location.href.split("/");
-    let idProduct = parseInt(urlSplit[urlSplit.length - 1]);
-    console.log(data);
+    const params = useParams();
+    let idProduct =  params.id;
 
-    let l = window.location.href;
     useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         })
-    }, [l])
+    }, [])
 
     let [hhh, setHhh] = useState("product__like")
 
@@ -25,7 +24,7 @@ function Product({ data, wishesList, funBasket, funWishes, w }) {
     }, []);
 
     let wishesActive = () => {
-        if(hhh == "product__like") {
+        if (hhh == "product__like") {
             funWishes(idProduct)
             setHhh("product__like-active")
         } else {

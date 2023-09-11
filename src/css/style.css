@@ -9,17 +9,17 @@
 
 @font-face {
   font-family: "GilroyNormal";
-  src: url(../../fonts/gilroy-regular.ttf);
+  src: url(./fonts/gilroy-regular.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: "GilroySemiBold";
-  src: url(../../fonts/gilroy-semibold.ttf);
+  src: url(./fonts/gilroy-semibold.ttf);
   font-weight: 600;
 }
 @font-face {
   font-family: "GilroyBold";
-  src: url(../../fonts/gilroy-bold.ttf);
+  src: url(./fonts/gilroy-bold.ttf);
   font-weight: 700;
 }
 body {
@@ -261,7 +261,7 @@ body {
   height: 24px !important;
   width: 24px !important;
   display: inline-block;
-  background-image: url(../img/long_right.svg) !important;
+  /* background-image: url(../img/long_right.svg) !important; */
   color: black;
 }
 

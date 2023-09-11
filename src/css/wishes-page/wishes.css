@@ -1,0 +1,86 @@
+.wishes {
+    padding: 0 121px;
+}
+.wishes__title {
+    font-family: "GilroyBold";
+    font-size: 80px;
+    line-height: 200%;
+    border-bottom: 1px solid #F3F3F3;
+    margin-bottom: 30px;
+}
+.wishes__list {
+    height: 70vh;
+}
+.wishes__empty-list {
+    font-family: "GilroyNormal";
+    font-size: 24px;
+    line-height: 150%;
+    color: #ACACAC;
+}
+.wishes__item {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #F3F3F3;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+.wishes__list .wishes__item:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+.wishes__img {
+    border: 1px solid #d4d4d4;
+    border-radius: 7px;
+    height: 200px;
+    min-width: 200px;
+    width: 200px;
+    margin-right: 20px;
+    padding: 10px;
+}
+.wishes__img img{
+    max-width: 100%;
+    height: 100%;
+}
+.wishes__info {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.wishes__type {
+    font-family: "GilroyNormal";
+    font-size: 24px;
+    line-height: 110%;
+    color: #434343;
+    margin-bottom: 5px;
+}
+.wishes__name {
+    font-family: "GilroyBold";
+    font-size: 36px;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+.wishes__row-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.wishes__icons {
+    display: flex;
+}
+.wishes__icon-wishes {
+    height: 40px;
+    width: 40px;
+    margin-right: 24px;
+    background: url("../../img/heart_fill.svg") center/100% no-repeat;
+    cursor: pointer;
+}
+.wishes__icon-shop {
+    height: 40px;
+    width: 40px;
+    background: url("../../img/shop-icon.svg") center/100% no-repeat;
+    cursor: pointer;
+}
+.wishes__price {
+    font-family: "GilroyNormal";
+    font-size: 32px;
+    line-height: 110%;
+}

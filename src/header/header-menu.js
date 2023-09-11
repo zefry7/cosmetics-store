@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { InputMask } from 'primereact/inputmask';
-import { Link } from "react-router-dom";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
 import img1 from "./img/Union.png";
 import img2 from "./img/shape.png";
 import img3 from "./img/Union1.png";
 import img4 from "./img/Vector.png";
+import cover from "./img/cover-img.png";
+import img5 from "./img/mir.svg"
 
 const massListSubtype = [
     { i1: "Кремовые маски", i2: "Тканевые маски", i3: "Гидрогелевые маски", i4: "Альгинатные маски", i5: "Гипсовые маски" },
@@ -155,165 +157,256 @@ function HeaderMenu({ fun, w }) {
 
     return (
         <>
-            <div class="line-one">
-                <p class="line-one__city" onClick={() => { visitbility(); }}>{city}</p>
-                <p class="line-one__phone">8 490 000 00 00</p>
-                {cityBlock == 1 &&
-                    <>
-                        <div class="city-change">
-                            <h5 class="city-change__title">Ваш город</h5>
-                            <p class="city-change__subtitle">
-                                Вы можете выбрать <span>более 150 000</span> населённых пунктов по всей
-                                Российской Федерации.
-                            </p>
-                            <ul class="city-change__list">
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Москва</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Екатеринбург</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Санкт-Петербург</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Новосибирск</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Казань</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Самара</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Ростов-на-Дону</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Челябинск</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Хабаровск</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Саратов</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Нижний Новгород</span>
-                                </li>
-                                <li class="city-change__item">
-                                    <input type="radio" name="city" class="city-change__input-radio" />
-                                    <span>Волгоград</span>
-                                </li>
+            <header className='header-content'>
+                <div class="line-one">
+                    <p class="line-one__city" onClick={() => { visitbility(); }}>{city}</p>
+                    <p class="line-one__phone">8 490 000 00 00</p>
+                    {cityBlock == 1 &&
+                        <>
+                            <div class="city-change">
+                                <h5 class="city-change__title">Ваш город</h5>
+                                <p class="city-change__subtitle">
+                                    Вы можете выбрать <span>более 150 000</span> населённых пунктов по всей
+                                    Российской Федерации.
+                                </p>
+                                <ul class="city-change__list">
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Москва</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Екатеринбург</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Санкт-Петербург</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Новосибирск</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Казань</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Самара</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Ростов-на-Дону</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Челябинск</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Хабаровск</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Саратов</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Нижний Новгород</span>
+                                    </li>
+                                    <li class="city-change__item">
+                                        <input type="radio" name="city" class="city-change__input-radio" />
+                                        <span>Волгоград</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="catalog__bg-black" onClick={() => { visitbility() }}></div>
+                        </>
+                    }
+                </div>
+                <div class="line-two">
+                    <Link to="/cosmetics-store/"> <div className="line-two__logo"></div></Link>
+                    <div className="line-two__menu">
+                        <p className="header-content__item" onClick={clickCatalog}>Каталог</p>
+                        <p className="header-content__item" onClick={() => { setCatalog(0) }}>
+                            <Link to="club">Клуб косметологов</Link>
+                        </p>
+                        <p className="header-content__item" onClick={() => { setCatalog(0) }}>
+                            <Link to="delivery">Доставка и оплата</Link>
+                        </p>
+                        <p className="header-content__item" onClick={() => { setCatalog(0) }}>
+                            <Link to="contacts">Контакты</Link>
+                        </p>
+                        <p className="header-content__item" onClick={() => { setCatalog(0) }}>
+                            <Link to="blog">Блог</Link>
+                        </p>
+
+                    </div>
+                    <div className="line-two__line-picture">
+                        <div class="line-two__wrapper-picture">
+                            <img className="header-content__picture" src={img1} alt="" />
+                        </div>
+                        <div class="line-two__wrapper-picture">
+                            <Link to="/wishes"><img className="header-content__picture" src={img2} alt="" /></Link>
+                        </div>
+                        <div class="line-two__wrapper-picture">
+                            <img className="header-content__picture" src={img3} alt="" onClick={() => { clickBasket(); ttt(); changeTotalSum(); correctInfo() }} />
+                            <div class="header-content__basket-label">{countTotal}</div>
+                        </div>
+                        <div class="line-two__wrapper-picture">
+                            <img className="header-content__picture" src={img4} alt="" onClick={() => { telBlock(); setValueTel(0); }} />
+                            {tel == 1 &&
+                                <>
+                                    <div class="login">
+                                        <h5 class="login__title">Войти или зарегистрироваться</h5>
+                                        <p class="login__subtitle">Мы отправим на номер SMS-сообщение с кодом<br /> подтверждения.</p>
+                                        <InputMask class="login__tel" value={valueTel} onChange={(e) => setValueTel(e.target.value)} mask="+ 7 (999) 999-99-99" placeholder="+ 7 (___) ___-__-__" />
+                                        <div class="login__button" onClick={() => { telBlock() }}>Получить код</div>
+                                    </div>
+                                    <div class="catalog__bg-black" onClick={() => { telBlock() }}></div>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+                {catalog == 1 &&
+                    <div class="catalog">
+                        <div class="catalog__block">
+                            <ul class="catalog__list-type">
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Все товары</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Очищение</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Пилинги и скрабы</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Тоники</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Кремы</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Концентраты</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Уход за волосами</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Эмульсии и гели</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Маски для лица</li>
+                                <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Уход за телом</li>
+                            </ul>
+                            <ul class="catalog__list-subtype">
+                                <li class="catalog__item-subtype">{massListSubtype[type].i1}</li>
+                                <li class="catalog__item-subtype">{massListSubtype[type].i2}</li>
+                                <li class="catalog__item-subtype">{massListSubtype[type].i3}</li>
+                                <li class="catalog__item-subtype">{massListSubtype[type].i4}</li>
+                                <li class="catalog__item-subtype">{massListSubtype[type].i5}</li>
                             </ul>
                         </div>
-                        <div class="catalog__bg-black" onClick={() => { visitbility() }}></div>
+                        <div class="catalog__bg-black" onClick={clickCatalog}></div>
+                    </div>
+                }
+                {basketBlock == true &&
+                    <>
+                        <div class="basket">
+                            {ppp > 0 ? (
+                                <>
+                                    <div class="basket__title"><span>Корзина</span> / {countTotal} шт.</div>
+                                    <div class="basket__list">
+                                        {bsList}
+                                    </div>
+                                    <p class="basket__sum">К оплате<br /> <span>{totalSum}</span> руб</p>
+                                    <div class="basket__button-buy">Оформить заказ</div>
+                                </>
+                            ) : (
+                                <>
+                                    <div class="basket__title"><span>Корзина</span></div>
+                                    <p class="basket__empty">В вашей корзине нет товара</p>
+                                </>
+                            )}
+                        </div>
+                        <div class="catalog__bg-black" onClick={clickBasket}></div>
                     </>
                 }
-            </div>
-            <div class="line-two">
-                <Link to="/"> <div className="line-two__logo"></div></Link>
-                <div className="line-two__menu">
-                    <p className="header-content__item" onClick={clickCatalog}>Каталог</p>
-                    <p className="header-content__item" onClick={() => { setCatalog(0) }}>
-                        <Link to="/club">Клуб косметологов</Link>
-                    </p>
-                    <p className="header-content__item" onClick={() => { setCatalog(0) }}>
-                        <Link to="/delivery">Доставка и оплата</Link>
-                    </p>
-                    <p className="header-content__item" onClick={() => { setCatalog(0) }}>
-                        <Link to="/contacts">Контакты</Link>
-                    </p>
-                    <p className="header-content__item" onClick={() => { setCatalog(0) }}>
-                        <Link to="/blog">Блог</Link>
-                    </p>
-
+            </header>
+            <div class="cover-img">
+                <div class="cover-img__name">
+                    KK <br />
+                    Shop
                 </div>
-                <div className="line-two__line-picture">
-                    <div class="line-two__wrapper-picture">
-                        <img className="header-content__picture" src={img1} alt="" />
-                    </div>
-                    <div class="line-two__wrapper-picture">
-                        <Link to="/wishes"><img className="header-content__picture" src={img2} alt="" /></Link>
-                    </div>
-                    <div class="line-two__wrapper-picture">
-                        <img className="header-content__picture" src={img3} alt="" onClick={() => { clickBasket(); ttt(); changeTotalSum(); correctInfo() }} />
-                        <div class="header-content__basket-label">{countTotal}</div>
-                    </div>
-                    <div class="line-two__wrapper-picture">
-                        <img className="header-content__picture" src={img4} alt="" onClick={() => { telBlock(); setValueTel(0); }} />
-                        {tel == 1 &&
-                            <>
-                                <div class="login">
-                                    <h5 class="login__title">Войти или зарегистрироваться</h5>
-                                    <p class="login__subtitle">Мы отправим на номер SMS-сообщение с кодом<br /> подтверждения.</p>
-                                    <InputMask class="login__tel" value={valueTel} onChange={(e) => setValueTel(e.target.value)} mask="+ 7 (999) 999-99-99" placeholder="+ 7 (___) ___-__-__" />
-                                    <div class="login__button" onClick={() => { telBlock() }}>Получить код</div>
-                                </div>
-                                <div class="catalog__bg-black" onClick={() => { telBlock() }}></div>
-                            </>
-                        }
-                    </div>
+                <div class="cover-img__img">
+                    <img src={cover} alt="" />
                 </div>
             </div>
-            {catalog == 1 &&
-                <div class="catalog">
-                    <div class="catalog__block">
-                        <ul class="catalog__list-type">
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Все товары</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Очищение</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Пилинги и скрабы</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Тоники</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Кремы</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Концентраты</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Уход за волосами</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Эмульсии и гели</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(0)}>Маски для лица</li>
-                            <li class="catalog__item-type" onMouseEnter={() => moveItemType(1)}>Уход за телом</li>
-                        </ul>
-                        <ul class="catalog__list-subtype">
-                            <li class="catalog__item-subtype">{massListSubtype[type].i1}</li>
-                            <li class="catalog__item-subtype">{massListSubtype[type].i2}</li>
-                            <li class="catalog__item-subtype">{massListSubtype[type].i3}</li>
-                            <li class="catalog__item-subtype">{massListSubtype[type].i4}</li>
-                            <li class="catalog__item-subtype">{massListSubtype[type].i5}</li>
+            <main class="main-content">
+                <Outlet />
+            </main>
+            <footer>
+                <div class="footer-top">
+                    <div class="footer-top__column">
+                        <div class="footer-top__img-logo">
+                            <img src="./img/image1.png" alt="" />
+                        </div>
+                        <p class="footer-top__text-contact">
+                            8 490 000 00 00 <br />
+                            Sale@kkshop.ru
+                        </p>
+                        <p class="footer-top__text-address">
+                            Москва, ул. Шаболовка, д. 34, стр. 7
+                        </p>
+                    </div>
+                    <div class="footer-top__column">
+                        <h4 class="footer-top__title">Каталог</h4>
+                        <ul class="footer-top__list">
+                            <li class="footer-top__item">Очищение</li>
+                            <li class="footer-top__item">Пилинги и скрабы</li>
+                            <li class="footer-top__item">Тоники</li>
+                            <li class="footer-top__item">Кремы</li>
+                            <li class="footer-top__item">Концентраты</li>
+                            <li class="footer-top__item">Концентраты с ферментами</li>
+                            <li class="footer-top__item">Сыворотки</li>
+                            <li class="footer-top__item">Эссенции</li>
+                            <li class="footer-top__item">Эмульсии и гели</li>
+                            <li class="footer-top__item">Маски для лица</li>
+                            <li class="footer-top__item">Жемчужная линия</li>
+                            <li class="footer-top__item">Уход за телом</li>
+                            <li class="footer-top__item">Уход за волосами</li>
+                            <li class="footer-top__item">Наборы и аксессуары</li>
                         </ul>
                     </div>
-                    <div class="catalog__bg-black" onClick={clickCatalog}></div>
+                    <div class="footer-top__column">
+                        <h4 class="footer-top__title">Информация</h4>
+                        <ul class="footer-top__list">
+                            <li class="footer-top__item">
+                                <Link to="/club">Клуб косметологов</Link>
+                            </li>
+                            <li class="footer-top__item">
+                                <Link to="/delivery">Доставка и оплата</Link>
+                            </li>
+                            <li class="footer-top__item">
+                                <Link to="/contacts">Контакты</Link>
+                            </li>
+                            <li class="footer-top__item">
+                                <Link to="/blog">Блог</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-top__column">
+                        <h4 class="footer-top__title">Мы в социальных сетях</h4>
+                        <div class="footer-top__messages">
+                            <img src="./img/social.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="footer-top__pay">
+                        <img src={img5} alt="" />
+                        <img src="./img/googlePay.svg" alt="" />
+                        <img src="./img/visa.svg" alt="" />
+                        <img src="./img/webmoney.svg" alt="" />
+                        <img src="./img/yandex.svg" alt="" />
+                        <img src="./img/master card.svg" alt="" />
+                    </div>
                 </div>
-            }
-            {basketBlock == true &&
-                <>
-                    <div class="basket">
-                        {ppp > 0 ? (
-                            <>
-                                <div class="basket__title"><span>Корзина</span> / {countTotal} шт.</div>
-                                <div class="basket__list">
-                                    {bsList}
-                                </div>
-                                <p class="basket__sum">К оплате<br /> <span>{totalSum}</span> руб</p>
-                                <div class="basket__button-buy">Оформить заказ</div>
-                            </>
-                        ) : (
-                            <>
-                                <div class="basket__title"><span>Корзина</span></div>
-                                <p class="basket__empty">В вашей корзине нет товара</p>
-                            </>
-                        )}
+                <div class="footer-bottom">
+                    <div class="footer-bottom__firma-info">
+                        <p class="footer-bottom__firma-name">ООО «Название»</p>
+                        <p class="footer-bottom__firma-ogrn">ОГРН <span>111111111111</span></p>
+                        <div class="footer-bottom__firma-c">KK Shop © Москва 2021 Все права защищены.</div>
                     </div>
-                    <div class="catalog__bg-black" onClick={clickBasket}></div>
-                </>
-            }
+                    <p class="footer-bottom__private">
+                        Все торговые марки принадлежат их владельцам. Копирование составляющих частей сайта в какой бы то ни
+                        было форме без разрешения владельца авторских прав запрещено.
+                    </p>
+                </div>
+            </footer>
         </>
     );
 }
