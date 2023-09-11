@@ -1,16 +1,40 @@
 {
   "files": {
-    "main.css": "/cosmetics-store/static/css/main.073c9b0a.css",
-    "main.js": "/cosmetics-store/static/js/main.7d14a61d.js",
-    "static/js/787.70a72393.chunk.js": "/cosmetics-store/static/js/787.70a72393.chunk.js",
-    "static/media/logo.svg": "/cosmetics-store/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/cosmetics-store/static/css/main.4f8ebfb8.css",
+    "main.js": "/cosmetics-store/static/js/main.53d4ef38.js",
+    "static/media/cover-img.png": "/cosmetics-store/static/media/cover-img.1ecfc0d9cd46992c57a6.png",
+    "static/media/Rectangle5.png": "/cosmetics-store/static/media/Rectangle5.982df88a280790e25382.png",
+    "static/media/Rectangle 90.png": "/cosmetics-store/static/media/Rectangle 90.06ff69f0aa1b8fd4f339.png",
+    "static/media/Rectangle34.png": "/cosmetics-store/static/media/Rectangle34.927853d8d957b6bc04c3.png",
+    "static/media/Rectangle7.png": "/cosmetics-store/static/media/Rectangle7.0929f7b3d9de0bcf1b79.png",
+    "static/media/Rectangle108.png": "/cosmetics-store/static/media/Rectangle108.f0d67d6d0c108a0c4042.png",
+    "static/media/auction-item.png": "/cosmetics-store/static/media/auction-item.66381443b719c8456da0.png",
+    "static/media/blog-1.png": "/cosmetics-store/static/media/blog-1.fb9a9c215125babae31f.png",
+    "static/media/blog-6.png": "/cosmetics-store/static/media/blog-6.d76273814445ed5a22cc.png",
+    "static/media/blog-3.png": "/cosmetics-store/static/media/blog-3.e25105f4b099def0e49c.png",
+    "static/media/blog-7.png": "/cosmetics-store/static/media/blog-7.2deace1042eaa9e1cf43.png",
+    "static/media/blog-8.png": "/cosmetics-store/static/media/blog-8.e69249967fffca81106a.png",
+    "static/media/blog-5.png": "/cosmetics-store/static/media/blog-5.d5e5de9cb3b396656369.png",
+    "static/media/blog-9.png": "/cosmetics-store/static/media/blog-9.2051ac29d01ca1d09327.png",
+    "static/media/blog-4.png": "/cosmetics-store/static/media/blog-4.b6fda9b3431236fca20d.png",
+    "static/media/blog-2.png": "/cosmetics-store/static/media/blog-2.9dc74bfa80136f8780c7.png",
+    "static/media/item-2-big.png": "/cosmetics-store/static/media/item-2-big.bf01bc17a67b7f8f0f66.png",
+    "static/media/rec-item-1.png": "/cosmetics-store/static/media/rec-item-1.df04c55f6511760c9b2d.png",
+    "static/media/rec-item-2.png": "/cosmetics-store/static/media/rec-item-2.c4aa2b44c8225fc6c37d.png",
+    "static/media/item-1.png": "/cosmetics-store/static/media/item-1.0dcc72cb9adfb7d8b177.png",
+    "static/media/rec-item-3.png": "/cosmetics-store/static/media/rec-item-3.bb5a83ce6327208c9b4a.png",
+    "static/media/item-2.png": "/cosmetics-store/static/media/item-2.5d6b23c984b8b4760e53.png",
+    "static/media/slick.svg": "/cosmetics-store/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/cosmetics-store/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/cosmetics-store/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/cosmetics-store/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/mir.svg": "/cosmetics-store/static/media/mir.a4052f2bd069103146a03d298a5fba4c.svg",
     "index.html": "/cosmetics-store/index.html",
-    "main.073c9b0a.css.map": "/cosmetics-store/static/css/main.073c9b0a.css.map",
-    "main.7d14a61d.js.map": "/cosmetics-store/static/js/main.7d14a61d.js.map",
-    "787.70a72393.chunk.js.map": "/cosmetics-store/static/js/787.70a72393.chunk.js.map"
+    "main.4f8ebfb8.css.map": "/cosmetics-store/static/css/main.4f8ebfb8.css.map",
+    "main.53d4ef38.js.map": "/cosmetics-store/static/js/main.53d4ef38.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7d14a61d.js"
+    "static/css/main.4f8ebfb8.css",
+    "static/js/main.53d4ef38.js"
   ]
 }

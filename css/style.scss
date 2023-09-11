@@ -1,0 +1,494 @@
+@import url(./null-style.css);
+
+@font-face {
+    font-family: "GilroyNormal";
+    src: url(../../fonts/gilroy-regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "GilroySemiBold";
+    src: url(../../fonts/gilroy-semibold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "GilroyBold";
+    src: url(../../fonts/gilroy-bold.ttf);
+    font-weight: 700;
+}
+
+@mixin text-style($ff, $fz, $c) {
+    font-family: $ff;
+    font-size: $fz;
+    color: $c;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.header-container {
+}
+
+.line-one {
+    background-color: #323232;
+    height: 49px;
+    padding: 0 121px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line-one__city {
+    @include text-style("GilroyNormal", 14px, white);
+}
+
+.line-one__phone {
+    @include text-style("GilroyNormal", 22px, white);
+}
+.line-two {
+    display: flex;
+    background-color: white;
+    height: 87px;
+    padding: 0 121px;
+    align-items: center;
+}
+.line-two__logo {
+    width: 124px;
+    height: 38px;
+    margin-right: 40px;
+    background: url(../../img/image1.png) left top no-repeat;
+}
+.line-two__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 752px;
+}
+.header-content__item {
+    @include text-style("GilroyNormal", 18px, black);
+}
+.line-two__line-picture {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    margin-left: auto;
+}
+
+.header-content__picture {
+    height: 20px;
+    width: 20px;
+}
+
+.content-info {
+    width: 100%;
+    height: 698px;
+    margin-bottom: 68px;
+}
+.content-info__img {
+    position: relative;
+    img {
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+        z-index: -1;
+    }
+}
+.content-info__text {
+    padding-top: 90px;
+    padding-left: 268px;
+}
+.content-info__title {
+    @include text-style("GilroySemiBold", 99px, black);
+    height: 149px;
+}
+
+.content-info__subtitle {
+    @include text-style("GilroyNormal", 24px, black);
+    margin-bottom: 45px;
+}
+
+.content-info__catalog {
+    @include text-style("GilroyNormal", 18px, white);
+    background-color: black;
+    height: 58px;
+    width: 268px;
+    text-align: center;
+    line-height: 58px;
+}
+
+.content-expert {
+    margin-bottom: 150px;
+    padding: 0px 121px;
+}
+.content-expert__main {
+    display: flex;
+    margin-bottom: 36px;
+}
+
+.content-expert__img {
+    margin-right: 72px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+.content-expert__text {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+}
+.content-expert__title {
+    @include text-style("GilroyNormal", 32px, black);
+    height: 84px;
+    margin-bottom: 16px;
+}
+.content-expert__subtitle {
+    @include text-style("GilroyNormal", 16px, black);
+    margin-bottom: 24px;
+    line-height: 150%;
+    width: 681px;
+}
+.content-expert__more {
+    @include text-style("GilroyNormal", 16px, #cc4c6e);
+}
+
+.content-expert__row-advantages {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    flex: 1 1 100%;
+    gap: 26px;
+}
+
+.content-expert__item {
+    flex: 25%;
+    line-height: 150%;
+    padding: 17px 0px 17px 32px;
+    @include text-style("GilroyNormal", 18px, black);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.new-product {
+    padding: 0px 121px;
+    margin-bottom: 183px;
+}
+.new-product__title {
+    @include text-style("GilroyNormal", 28px, black);
+    margin-bottom: 24px;
+}
+.new-product__slider {
+    max-height: 474px;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+}
+.slider__item {
+    width: 377px !important;
+    margin-right: 56px;
+}
+.slider__item-view {
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.slider__item-label {
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    width: 56px;
+    background-color: #ff3465;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include text-style("GilroyBold", 12px, white);
+    text-transform: uppercase;
+}
+.slider__item-img {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.slider__item-text {
+    display: flex;
+    justify-content: space-between;
+}
+.slider__item-name {
+    text-transform: uppercase;
+    @include text-style("GilroyBold", 20px, black);
+    margin-bottom: 8px;
+}
+.slider__item-descripttion {
+    @include text-style("GilroyNormal", 16px, #5c5c66);
+}
+.slider__item-price {
+    line-height: 42px;
+    margin-right: 15px;
+    @include text-style("GilroyBold", 27px, black);
+}
+.slick-list {
+    max-height: 474px;
+}
+.slick-prev {
+    transform: rotate(180deg) !important;
+    top: -50px !important;
+    left: auto !important;
+    right: 44px !important;
+}
+.slick-next {
+    top: -38px !important;
+    right: 0 !important;
+}
+
+.slick-arrow {
+    height: 24px !important;
+    width: 24px !important;
+    z-index: 10;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    content: "" !important;
+    font-family: "" !important;
+    height: 24px !important;
+    width: 24px !important;
+    display: inline-block;
+    background-image: url(../img/long_right.svg) !important;
+    color: black;
+}
+.slick-arrow:active {
+    opacity: 0.5;
+}
+
+.auction-product {
+    margin-bottom: 183px;
+
+    .slider__item {
+        width: 990px !important;
+    }
+
+    .slider__item-img {
+        img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    .slick-next,
+    .slick-prev {
+        margin-right: 130px;
+    }
+
+    .slider__item-name {
+        @include text-style("GilroyBold", 48px, black);
+    }
+    .slider__item-descripttion {
+        @include text-style("GilroyNormal", 20px, #5c5c66);
+    }
+    .slick-list {
+        max-height: 540px;
+    }
+}
+.auction-product__title {
+    @extend .new-product__title;
+    padding: 0px 121px;
+}
+
+.recommended-product {
+    @extend .new-product;
+}
+.recommended-product__title {
+    @extend .new-product__title;
+}
+
+.cover-img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+
+    animation: cover-up 1.2s ease-out 0.6s;
+    animation-fill-mode: forwards;
+}
+@keyframes cover-up {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
+}
+.cover-img__name {
+    position: absolute;
+    @include text-style("GilroyBold", 150px, white);
+    left: 175px;
+    bottom: 120px;
+}
+.cover-img__img {
+    height: 100%;
+    width: 100%;
+
+    img {
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+        object-fit: fill;
+    }
+}
+
+.mailing-block {
+    margin-bottom: 150px;
+    position: relative;
+    padding: 0 130px;
+    display: flex;
+    align-items: center;
+}
+.mailing-block__img {
+
+    img {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 2;
+    }
+}
+.mailing-block__info-background{
+    position: absolute;
+    width: 1243px;
+    height: 555px; 
+    background: #F3F3F3;
+    right: 130px;
+    z-index: 1;
+}
+.mailing-block__info {
+    padding: 98px 283px 98px 433px;
+
+}
+.mailing-block__title {
+    @include text-style("GilroyBold", 48px, black);
+    margin-bottom: 20px;
+    line-height: 110%;
+}
+.mailing-block__subtitle {
+    @include text-style("GilroyNormal", 22px, #5A5A5A);
+    margin-bottom: 48px;
+    line-height: 130%;
+}
+.mailing-block__input {
+    @include text-style("GilroyNormal", 22px, #5A5A5A);
+    background-color: transparent;
+    border-bottom: 1px solid #C4C4C4;
+    line-height: 34px;
+    padding-bottom: 8px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.mailing-block__button {
+    cursor: pointer;
+    padding: 17px 0px;
+    background-color: black;
+    width: 100%;
+    @include text-style("GilroyNormal", 22px, white);
+    text-align: center;
+}
+
+.footer-top {
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 121px;
+    margin-bottom: 19px;
+    flex: 0 1 20%;
+    position: relative;
+}
+.footer-top__img-logo {
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+.footer-top__text-contact {
+    @include text-style("GilroyBold", 22px, #828282);
+    margin: 16px 0;
+    line-height: 120%;
+}
+.footer-top__text-address {
+    @include text-style("GilroyNormal", 16px, #828282);
+}
+.footer-top__title {
+    @include text-style("GilroyNormal", 22px, black);
+    margin-bottom: 12px;
+    line-height: 200%;
+}
+.footer-top__list {
+}
+.footer-top__item {
+    margin-bottom: 8px;
+    @include text-style("GilroyNormal", 16px, #4E4E4E);
+    cursor: pointer;
+}
+.footer-top__item:hover {
+    text-decoration: underline;
+}
+.footer-top__messages {
+    margin-top: 8px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.footer-top__pay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    height: 59px;
+    position: absolute;
+    bottom: 0;
+    right: 121px;  
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 121px;
+    padding-bottom: 24px;
+}
+.footer-bottom__firma-info {
+}
+.footer-bottom__firma-name {
+    @include text-style("GilroyNormal", 14px, #828282);
+}
+.footer-bottom__firma-ogrn {
+    @include text-style("GilroyNormal", 14px, #828282);
+    margin: 8px 0;
+    span {
+        color: black
+    }
+}
+.footer-bottom__firma-c {
+    @include text-style("GilroyNormal", 16px, #B7B7B7);
+}
+.footer-bottom__private {
+    width: 708px;
+    text-align: right;
+    @include text-style("GilroyNormal", 16px, #B7B7B7);
+    line-height: 150%;
+}
