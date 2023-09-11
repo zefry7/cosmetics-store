@@ -99,14 +99,14 @@ function App() {
           </div>
           <main class="main-content">
             <Routes>
-              <Route path='/cosmetics-store/*'>
+              <Route path='cosmetics-store'>
                 <Route index element={<Main data={dataProduct} />} />
                 <Route path='club' element={<Club />} />
                 <Route path='blog' element={<Blog />} />
                 <Route path='delivery' element={<Delivery />} />
                 <Route path='contacts' element={<Contacts />} />
                 <Route path='wishes' element={<Wishes list={wishesList} />} />
-                <Route path="product/*" >
+                <Route path="product" >
                   {productPages()}
                 </Route>
               </Route>
