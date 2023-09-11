@@ -1,0 +1,414 @@
+.line-one {
+    background-color: #323232;
+    height: 49px;
+    padding: 0 121px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.line-one__city {
+    font-family: "GilroyNormal";
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+  }
+.line-one__city::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    left: 7px;
+    top: 4px;
+    height: 16px;
+    width: 16px;
+    background: url("../../img/city-arrow.svg") center / cover no-repeat;
+}
+  
+.line-one__phone {
+    font-family: "GilroyNormal";
+    font-size: 22px;
+    color: white;
+}
+.city-change {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    padding: 100px;
+}
+.city-change__title {
+    font-family: "GilroyBold";
+    font-size: 80px;
+    line-height: 150%;
+}
+.city-change__subtitle {
+    font-family: "GilroyNormal";
+    font-size: 24px;
+    line-height: 150%;
+    color: #828282;
+    width: 600px;
+    margin-bottom: 22px;
+}
+.city-change__subtitle span {
+    color: black;
+}
+.city-change__list {
+}
+.city-change__item {
+    position: relative;
+    font-family: "GilroyNormal";
+    font-size: 26px;
+    line-height: 150%;
+}
+.city-change__input-radio {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 240px;
+    height: 100%;
+}
+.city-change__input-radio:checked + span {
+    color: #D785A1;
+}
+.line-two {
+    top: 49px;
+    left: 0;
+    display: flex;
+    background-color: white;
+    height: 87px;
+    padding: 0 121px;
+    align-items: center;
+}
+  
+  .line-two__logo {
+    width: 124px;
+    height: 38px;
+    margin-right: 40px;
+    background: url(../../img/image1.png) left top no-repeat;
+  }
+  
+  .line-two__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 752px;
+  }
+  
+  .header-content__item {
+    font-family: "GilroyNormal";
+    font-size: 18px;
+    color: black !important;
+    cursor: pointer;
+    line-height: 22px;
+  }
+  .header-content__item > a {
+    color: black !important;
+  }
+  
+  .header-content__item:hover {
+    border-bottom: 1px solid black;
+  }
+  
+  .line-two__line-picture {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    margin-left: auto;
+  }
+.line-two__wrapper-picture {
+    position: relative;
+}
+.header-content__count-basket {
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "GilroyNormal";
+    text-align: center;
+    display: block !important;
+}
+  
+.header-content__picture {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.header-content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+.login {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login > * {
+    width: 510px;
+}
+.login__title {
+    font-size: 48px;
+    font-family: "GilroyBold";
+    line-height: 120%;
+    margin-bottom: 15px;
+}
+.login__subtitle {
+    font-size: 16px;
+    font-family: "GilroyNormal";
+    line-height: 150%;
+    margin-bottom: 15px;
+}
+.login__tel {
+    font-size: 16px;
+    font-family: "GilroyNormal";
+    line-height: 150%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #CACACA;
+}
+.login__button {
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    font-family: "GilroyNormal";
+    line-height: 150%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.catalog {
+    position: absolute;
+    left: 0;
+    top: 136px;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+}
+.catalog__block {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 20px 140px 32px;
+    display: flex;
+}
+.catalog__list-type {
+    width: max-content;
+    border-right: 1px solid #00000080;
+    padding-right: 10px;
+    margin-right: 30px;
+}
+.catalog__item-type {
+    font-family: "GilroyNormal";
+    font-size: 18px;
+    line-height: 200%;
+    padding: 0 30px 0 10px;
+}
+.catalog__item-type:hover {
+    background-color: #00000080;
+    color: white;
+}
+.catalog__list-subtype {
+}
+.catalog__item-subtype {
+    font-family: "GilroyNormal";
+    font-size: 18px;
+    line-height: 200%;
+    color: #00000080;
+}
+.catalog__item-subtype:hover {
+    color: black;
+}
+.catalog__bg-black {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.basket {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 100;
+    background-color: white;
+    padding: 67px 104px;
+}
+.basket__title {
+    font-size: 32px;
+    font-family: "GilroyNormal";
+    margin-bottom: 20px;
+}
+.basket__title span {
+    font-family: "GilroyBold";
+    font-size: 48px;
+    line-height: 150%;
+}
+.basket__list {
+    overflow: auto;
+    max-height: 600px;
+    margin-bottom: 20px;
+}
+.basket__item {
+    border-bottom: 1px solid #F3F3F3;
+    padding-bottom: 16px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.basket__list .basket__item:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+.basket__img {
+    height: 126px;
+    min-width: 126px;
+    margin-right: 20px;
+}
+.basket__img  img {
+    max-width: 100%;
+    height: 100%;
+}
+.basket__info {
+    width: 100%;
+}
+.basket__top-row {
+    display: flex;
+    justify-content: space-between;
+}
+.basket__description {
+    color: #434343;
+    font-size: 14px;
+    font-family: "GilroyNormal";
+    line-height: 110%;
+    margin-bottom: 10px;
+}
+.basket__count {
+    display: flex;
+}
+.basket__plus,
+.basket__minus {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "GilroyBold";
+    text-align: center;
+    cursor: pointer;
+}
+.basket__count-product {
+    font-size: 15px;
+    line-height: 24px;
+    font-family: "GilroyBold";
+    margin: 0 8px;
+    text-align: center;
+    width: 30px;
+}
+.basket__delete {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.basket__delete span:first-child {
+    position: relative;
+    top: 50%;
+    height: 1.5px;
+    width: 20px;
+    background-color: black;
+    transform: rotate(45deg) translateY(-50%);
+}
+.basket__delete span:last-child {
+    position: relative;
+    top: -50%;
+    height: 1.5px;
+    width: 20px;
+    background-color: black;
+    transform: rotate(-45deg) translateY(50%);
+}
+.basket__name {
+    font-size: 18px;
+    font-family: "GilroyBold";
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+.basket__bottom-row {
+    display: flex;
+    justify-content: space-between;
+}
+.basket__volume {
+    color: #434343;
+    font-size: 14px;
+    font-family: "GilroyNormal";
+    line-height: 110%;
+}
+.basket__price {
+    font-size: 20px;
+    font-family: "GilroyNormal";
+    line-height: 200%;
+}
+.basket__sum {
+    color: #434343;
+    font-size: 14px;
+    font-family: "GilroyNormal";
+    line-height: 110%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.basket__sum span {
+    font-size: 24px;
+    font-family: "GilroyNormal";
+    line-height: 200%;
+}
+.basket__button-buy {
+    font-size: 18px;
+    font-family: "GilroyNormal";
+    line-height: 200%;
+    color: white;
+    padding: 13px 0;
+    text-align: center;
+    background-color: black;
+}
+.basket__empty {
+    color: #CACACA;
+    font-size: 24px;
+    font-family: "GilroyNormal"; 
+    text-align: center;
+    padding-top: 50px;
+    border-top: 1px solid #CACACA;
+}
+.header-content__basket-label {
+    display: none;
+}
+

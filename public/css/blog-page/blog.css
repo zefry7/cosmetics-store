@@ -1,0 +1,52 @@
+.blog {
+    padding: 0 121px;
+}
+.blog__title {
+    font-family: "GilroyBold";
+    font-size: 80px;
+    line-height: 200%;
+}
+.blog__articles-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blog__article {
+    position: relative;
+    flex: 0 1 30%;
+    margin-bottom: 63px;
+}
+.blog__img img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.blog__name {
+    font-family: "GilroyNormal";
+    font-size: 22px;
+    line-height: 150%;
+    color: #D785A1;
+}
+.blog__description {
+    color: #636363;
+    font-family: "GilroyNormal";
+    font-size: 16px;
+    line-height: 150%;
+}
+.blog__date {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 96px;
+    height: 77px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-family: "GilroyBold";
+    text-align: center;
+    padding-top: 30px;
+    line-height: 100%;
+}
+.blog__date span {
+    font-size: 32px;
+}

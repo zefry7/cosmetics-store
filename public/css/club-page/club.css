@@ -1,0 +1,81 @@
+.club-content {
+    display: flex;
+    padding: 0 121px;
+    margin: 70px 0;
+    cursor: default;
+}
+.block-img {
+    position: relative;
+    margin-right: 84px;
+}
+.block-img__img {
+    max-width: 100%;
+    height: auto;
+}
+.block-img__block {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.80);
+}
+.block-img__text {
+    font-size: 16px;
+    line-height: 200%;
+    font-family: "GilroyNormal";
+}
+.block-img__name {
+    font-family: "GilroyBold";
+    line-height: 130%;
+    font-size: 79px;
+    text-transform: uppercase;
+}
+.block-img__button {
+    width: 268px;
+    height: 58px;
+    background-color: black;
+    font-size: 18px;
+    line-height: 150%;
+    color: white;
+    font-family: "GilroyNormal";
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.block-info {
+    flex: 0 1 50%;
+}
+.block-info__title {
+    font-family: "GilroyBold";
+    line-height: 200%;
+    font-size: 80px;
+}
+.block-info__subtitle {
+    margin-bottom: 20px;
+    font-family: "GilroySemiBold";
+    line-height: 150%;
+    font-size: 22px;
+}
+h6.block-info__subtitle {
+    margin-bottom: 10px;
+    font-family: "GilroySemiBold";
+    font-size: 16px;
+}
+.block-info__text {
+    margin-bottom: 20px;
+    font-family: "GilroyNormal";
+    line-height: 150%;
+}
+.block-info__registration {
+    display: flex;
+    justify-content: space-between;
+}
+.block-info__text_color_gray {
+    color: #828282;
+}
+.block-info__registration span {
+    color: #D785A1;
+}
+.block-info__column-reg {
+    flex: 0 1 44%;
+}
