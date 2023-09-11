@@ -99,7 +99,7 @@ function App() {
           </div>
           <main class="main-content">
             <Routes>
-              <Route path='cosmetics-store/'>
+              <Route path='cosmetics-store/*'>
                 <Route index element={<Main data={dataProduct} />} />
                 <Route path='club' element={<Club />} />
                 <Route path='blog' element={<Blog />} />
