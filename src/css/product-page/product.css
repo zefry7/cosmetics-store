@@ -1,5 +1,7 @@
 .product {
     padding: 50px 121px 110px;
+    cursor: default;
+    animation: vis 0.3s linear;
 }
 .product__main {
     display: flex;

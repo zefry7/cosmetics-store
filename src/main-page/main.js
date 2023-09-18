@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
-import ReactDOM from "react-dom/client";
 import NewProductItem from './NewProductItem';
 import AuctionProduct from './AuctionProduct';
 import RecommendedProduct from './RecommendedProduct';
-import { Outlet } from "react-router-dom";
 
 import img1 from "./src-img/Rectangle7.png";
 import img2 from "./src-img/Rectangle5.png";
@@ -21,7 +19,7 @@ function Main({ data }) {
 
     return (
         <>
-            
+            <div className="main-content__block">
                 <div className="content-info">
                     <div className="content-info__img">
                         <img src={img2} alt="" />
@@ -90,6 +88,7 @@ function Main({ data }) {
                         </div>
                     </div>
                 </div>
+            </div>
         </>
     );
 }

@@ -1,5 +1,6 @@
 .wishes {
     padding: 0 121px;
+    cursor: default;
 }
 .wishes__title {
     font-family: "GilroyBold";

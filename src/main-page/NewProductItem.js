@@ -14,7 +14,7 @@ function NewProductItem({ data }) {
         autoplaySpeed: 7000
     };
 
-    const t = () => {
+    const listSliderItem = () => {
         let content = [];
         for (let i = 0; i < 8; ++i) {
             content.push(
@@ -51,7 +51,7 @@ function NewProductItem({ data }) {
 
     return (
         <Slider {...settings} className="slider">
-            {t()}
+            {listSliderItem()}
         </Slider>
     );
 }

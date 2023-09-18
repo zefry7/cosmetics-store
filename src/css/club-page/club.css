@@ -1,8 +1,8 @@
 .club-content {
     display: flex;
-    padding: 0 121px;
-    margin: 70px 0;
+    padding: 70px 121px;
     cursor: default;
+    animation: vis 0.3s linear;
 }
 .block-img {
     position: relative;
@@ -41,6 +41,11 @@
     padding: 15px 0;
     text-align: center;
     cursor: pointer;
+    transition: all 0.1s linear 0s;
+}
+.block-img__button:hover {
+    border-radius: 30px;
+    transition: all 0.1s linear 0s;
 }
 .block-info {
     flex: 0 1 50%;

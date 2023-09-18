@@ -30,11 +30,14 @@ body {
 .main-content {
   margin-top: 136px;
 }
-
+.main-content__block{
+  animation: vis 0.3s linear;
+}
 .content-info {
   width: 100%;
   height: 698px;
   margin-bottom: 68px;
+  cursor: default;
 }
 
 .content-info__img {
@@ -75,11 +78,19 @@ body {
   width: 268px;
   text-align: center;
   line-height: 58px;
+  transition: all 0.1s linear 0s;
+  cursor: pointer;
+}
+
+.content-info__catalog:hover {
+  border-radius: 30px;
+  transition: all 0.1s linear 0s;
 }
 
 .content-expert {
   margin-bottom: 150px;
   padding: 0px 121px;
+  cursor: default;
 }
 
 .content-expert__main {
@@ -124,6 +135,8 @@ body {
   font-family: "GilroyNormal";
   font-size: 16px;
   color: #cc4c6e;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .content-expert__row-advantages {
@@ -166,16 +179,19 @@ body {
 }
 
 .slider__item {
-  width: 377px !important;
+  width: 370px !important;
   margin-right: 56px;
   padding: 10px;
   transition: all 0.1s linear;
   cursor: pointer;
+  border-radius: 7px;
 }
 .slider__item:hover {
   transition: all 0.1s linear;
   transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(160, 160, 160, 0.699);
 }
+
 .slider__item-view {
   height: 380px;
   position: relative;
@@ -191,6 +207,7 @@ body {
   text-align: center;
   width: 56px;
   background-color: #ff3465;
+  border-radius: 7px;
   position: absolute;
   left: 0;
   top: 0;
@@ -199,7 +216,6 @@ body {
   color: white;
   text-transform: uppercase;
 }
-
 .slider__item-img img {
   max-width: 100%;
   height: auto;
@@ -261,14 +277,16 @@ body {
   height: 24px !important;
   width: 24px !important;
   display: inline-block;
-  background-image: url(./img/long_right.svg) !important; 
+  background-image: url(../img/long_right.svg) !important; 
   color: black;
 }
 
 .slick-arrow:active {
   opacity: 0.5;
 }
-
+.auction-product__slider .slider__item-img {
+  height: 100%;
+}
 .auction-product {
   margin-bottom: 183px;
 }
@@ -309,7 +327,7 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
   animation: cover-up 1.2s ease-out 0.6s;
   animation-fill-mode: forwards;
 }
@@ -349,6 +367,7 @@ body {
   padding: 0 130px;
   display: flex;
   align-items: center;
+  cursor: default;
 }
 
 .mailing-block__img img {
@@ -408,7 +427,13 @@ body {
   font-size: 22px;
   color: white;
   text-align: center;
+  transition: all 0.1s linear 0s;
 }
+.mailing-block__button:hover {
+  border-radius: 30px;
+  transition: all 0.1s linear 0s;
+}
+
 
 .footer-top {
   cursor: default;
@@ -488,6 +513,7 @@ body {
   align-items: flex-end;
   padding: 0 121px;
   padding-bottom: 24px;
+  cursor: default;
 }
 
 .footer-bottom__firma-name {
@@ -519,4 +545,12 @@ body {
   font-size: 16px;
   color: #B7B7B7;
   line-height: 150%;
+}
+@keyframes vis {
+  0%{
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

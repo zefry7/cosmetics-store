@@ -2,38 +2,38 @@ import React, { useEffect} from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-function Product({ data, wishesList, funBasket, funWishes, w }) {
+function Product({ data, wishesList, funBasket, funWishes }) {
     const params = useParams();
     let idProduct =  params.id;
 
+    let l = window.location.href;
     useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         })
-    }, [])
+    }, [l])
 
-    let [hhh, setHhh] = useState("product__like")
-
+    let [productLike, setProductLike] = useState("product__like")
     useEffect(() => {
         for (let x of wishesList) {
             if (x.id == idProduct) {
-                setHhh("product__like-active")
+                setProductLike("product__like-active")
             }
         }
     }, []);
 
     let wishesActive = () => {
-        if (hhh == "product__like") {
+        if (productLike == "product__like") {
             funWishes(idProduct)
-            setHhh("product__like-active")
+            setProductLike("product__like-active")
         } else {
             for (let x of wishesList) {
                 if (x.id == idProduct) {
                     wishesList.splice(wishesList.indexOf(x), 1);
                 }
             }
-            setHhh("product__like")
+            setProductLike("product__like")
         }
     }
 
@@ -52,7 +52,7 @@ function Product({ data, wishesList, funBasket, funWishes, w }) {
                         <p class="product__price">Цена: {data[idProduct].price} руб</p>
                         <div class="product__buttons">
                             <div class="product__add-basket" onClick={() => { funBasket(idProduct); }}>Добавить в корзину</div>
-                            <div class={hhh} onClick={() => { funWishes(idProduct); wishesActive(); }}></div>
+                            <div class={productLike} onClick={() => { funWishes(idProduct); wishesActive(); }}></div>
                         </div>
                         <p class="product__availability">Наличие в магазинах</p>
                     </div>

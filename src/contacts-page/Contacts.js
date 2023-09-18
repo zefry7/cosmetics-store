@@ -21,9 +21,7 @@ const massItems = () => {
 
 
 function Contacts() {
-
     let l = window.location.href;
-
     useEffect(() => {
         window.scrollTo({
             top: 0,

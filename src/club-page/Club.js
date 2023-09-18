@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import img1 from "./img/Rectangle 90.png"
-import { Outlet } from "react-router-dom";
 
 function Club() {
     let l = window.location.href;

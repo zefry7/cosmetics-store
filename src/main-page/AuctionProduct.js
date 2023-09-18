@@ -13,7 +13,7 @@ function AuctionProduct() {
         centerMode: true
     };
 
-    const t = () => {
+    const listSliderItem = () => {
         let content = [];
         for (let i = 0; i < 5; ++i) {
             content.push(
@@ -41,7 +41,7 @@ function AuctionProduct() {
 
     return (
         <Slider {...settings} className="slider">
-            {t()}
+            {listSliderItem()}
         </Slider>
     );
 }

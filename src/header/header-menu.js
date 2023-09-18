@@ -1,12 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import { InputMask } from 'primereact/inputmask';
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+
 import img1 from "./img/Union.png";
 import img2 from "./img/shape.png";
 import img3 from "./img/Union1.png";
 import img4 from "./img/Vector.png";
 import cover from "./img/cover-img.png";
-import img5 from "./img/mir.svg"
+import f_logo from "../img/image1.png"
+import f_pay_img_1 from "./img/mir.svg"
+import f_pay_img_2 from "./img/googlePay.svg"
+import f_pay_img_3 from "./img/visa.svg"
+import f_pay_img_4 from "./img/webmoney.svg"
+import f_pay_img_5 from "./img/yandex.svg"
+import f_pay_img_6 from "./img/master card.svg"
+import f_social_img from "./img/social.svg"
 
 const massListSubtype = [
     { i1: "Кремовые маски", i2: "Тканевые маски", i3: "Гидрогелевые маски", i4: "Альгинатные маски", i5: "Гипсовые маски" },
@@ -25,9 +33,47 @@ function HeaderMenu({ fun, w }) {
 
     const clickCatalog = () => { catalog == 0 ? setCatalog(1) : setCatalog(0); }
     const moveItemType = (index) => { setType(index); }
-    const visitbility = () => { cityBlock == 0 ? setCityBlock(1) : setCityBlock(0) }
-    const clickBasket = () => { basketBlock == false ? setBasketBlock(true) : setBasketBlock(false) }
-    const telBlock = () => { tel == 0 ? setTel(1) : setTel(0); }
+
+    const visitbility = () => {
+        if (cityBlock == 0) {
+            setCityBlock(1)
+        } else {
+            let el = document.getElementsByClassName("city-change__block")[0];
+            el.classList.add("header-content__block_close");
+            el.addEventListener("animationend", () => {
+                setCityBlock(0);
+                el.classList.remove("header-content__block_close");
+            })
+        }
+    }
+
+    const clickBasket = () => {
+        if (basketBlock == false) {
+            setBasketBlock(true)
+        } else {
+            let el = document.getElementsByClassName("basket__block")[0];
+            el.classList.add("header-content__block_close");
+            console.log(123);
+            el.addEventListener("animationend", () => {
+                setBasketBlock(false)
+                el.classList.remove("header-content__block_close");
+            })
+        }
+    }
+    
+    const telBlock = () => {
+        if (tel == 0) {
+            setTel(1)
+        } else {
+            let el = document.getElementsByClassName("login__block")[0];
+            el.classList.add("header-content__block_close");
+            el.addEventListener("animationend", () => {
+                setTel(0)
+                el.classList.remove("header-content__block_close");
+            })
+
+        }
+    }
 
     const fr = useRef(true)
     useEffect(() => {
@@ -82,7 +128,6 @@ function HeaderMenu({ fun, w }) {
     }
 
     const [countTotal, setCountTotal] = useState(0);
-    const [yyy, setYyy] = useState(w.current);
     function ttt() {
         let a = 0;
         fun.forEach((value) => {
@@ -157,6 +202,15 @@ function HeaderMenu({ fun, w }) {
 
     return (
         <>
+            <div class="cover-img">
+                <div class="cover-img__name">
+                    KK <br />
+                    Shop
+                </div>
+                <div class="cover-img__img">
+                    <img src={cover} alt="" />
+                </div>
+            </div>
             <header className='header-content'>
                 <div class="line-one">
                     <p class="line-one__city" onClick={() => { visitbility(); }}>{city}</p>
@@ -164,68 +218,70 @@ function HeaderMenu({ fun, w }) {
                     {cityBlock == 1 &&
                         <>
                             <div class="city-change">
-                                <h5 class="city-change__title">Ваш город</h5>
-                                <p class="city-change__subtitle">
-                                    Вы можете выбрать <span>более 150 000</span> населённых пунктов по всей
-                                    Российской Федерации.
-                                </p>
-                                <ul class="city-change__list">
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Москва</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Екатеринбург</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Санкт-Петербург</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Новосибирск</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Казань</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Самара</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Ростов-на-Дону</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Челябинск</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Хабаровск</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Саратов</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Нижний Новгород</span>
-                                    </li>
-                                    <li class="city-change__item">
-                                        <input type="radio" name="city" class="city-change__input-radio" />
-                                        <span>Волгоград</span>
-                                    </li>
-                                </ul>
+                                <div class="city-change__block">
+                                    <h5 class="city-change__title">Ваш город</h5>
+                                    <p class="city-change__subtitle">
+                                        Вы можете выбрать <span>более 150 000</span> населённых пунктов по всей
+                                        Российской Федерации.
+                                    </p>
+                                    <ul class="city-change__list">
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Москва</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Екатеринбург</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Санкт-Петербург</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Новосибирск</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Казань</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Самара</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Ростов-на-Дону</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Челябинск</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Хабаровск</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Саратов</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Нижний Новгород</span>
+                                        </li>
+                                        <li class="city-change__item">
+                                            <input type="radio" name="city" class="city-change__input-radio" />
+                                            <span>Волгоград</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="catalog__bg-black" onClick={() => { visitbility() }}></div>
                         </>
                     }
                 </div>
                 <div class="line-two">
-                    <Link to="/cosmetics-store/"> <div className="line-two__logo"></div></Link>
+                    <Link to="/cosmetics-store/"> <div className="line-two__logo" onClick={() => { setCatalog(0) }}></div></Link>
                     <div className="line-two__menu">
                         <p className="header-content__item" onClick={clickCatalog}>Каталог</p>
                         <p className="header-content__item" onClick={() => { setCatalog(0) }}>
@@ -247,23 +303,25 @@ function HeaderMenu({ fun, w }) {
                             <img className="header-content__picture" src={img1} alt="" />
                         </div>
                         <div class="line-two__wrapper-picture">
-                            <Link to="wishes"><img className="header-content__picture" src={img2} alt="" /></Link>
+                            <Link to="wishes" onClick={() => { setCatalog(0) }}><img className="header-content__picture" src={img2} alt="" /></Link>
                         </div>
                         <div class="line-two__wrapper-picture">
-                            <img className="header-content__picture" src={img3} alt="" onClick={() => { clickBasket(); ttt(); changeTotalSum(); correctInfo() }} />
+                            <img className="header-content__picture" src={img3} alt="" onClick={() => { clickBasket(); ttt(); changeTotalSum(); correctInfo(); setCatalog(0) }} />
                             <div class="header-content__basket-label">{countTotal}</div>
                         </div>
                         <div class="line-two__wrapper-picture">
-                            <img className="header-content__picture" src={img4} alt="" onClick={() => { telBlock(); setValueTel(0); }} />
+                            <img className="header-content__picture" src={img4} alt="" onClick={() => { telBlock(); setValueTel(0); setCatalog(0) }} />
                             {tel == 1 &&
                                 <>
                                     <div class="login">
-                                        <h5 class="login__title">Войти или зарегистрироваться</h5>
-                                        <p class="login__subtitle">Мы отправим на номер SMS-сообщение с кодом<br /> подтверждения.</p>
-                                        <InputMask class="login__tel" value={valueTel} onChange={(e) => setValueTel(e.target.value)} mask="+ 7 (999) 999-99-99" placeholder="+ 7 (___) ___-__-__" />
-                                        <div class="login__button" onClick={() => { telBlock() }}>Получить код</div>
+                                        <div className="login__block">
+                                            <h5 class="login__title">Войти или зарегистрироваться</h5>
+                                            <p class="login__subtitle">Мы отправим на номер SMS-сообщение с кодом<br /> подтверждения.</p>
+                                            <InputMask class="login__tel" value={valueTel} onChange={(e) => setValueTel(e.target.value)} mask="+ 7 (999) 999-99-99" placeholder="+ 7 (___) ___-__-__" />
+                                            <div class="login__button" onClick={() => { telBlock() }}>Получить код</div>
+                                        </div>
+                                        <div class="catalog__bg-black" onClick={() => { telBlock() }}></div>
                                     </div>
-                                    <div class="catalog__bg-black" onClick={() => { telBlock() }}></div>
                                 </>
                             }
                         </div>
@@ -298,35 +356,28 @@ function HeaderMenu({ fun, w }) {
                 {basketBlock == true &&
                     <>
                         <div class="basket">
-                            {ppp > 0 ? (
-                                <>
-                                    <div class="basket__title"><span>Корзина</span> / {countTotal} шт.</div>
-                                    <div class="basket__list">
-                                        {bsList}
-                                    </div>
-                                    <p class="basket__sum">К оплате<br /> <span>{totalSum}</span> руб</p>
-                                    <div class="basket__button-buy">Оформить заказ</div>
-                                </>
-                            ) : (
-                                <>
-                                    <div class="basket__title"><span>Корзина</span></div>
-                                    <p class="basket__empty">В вашей корзине нет товара</p>
-                                </>
-                            )}
+                            <div className="basket__block">
+                                {ppp > 0 ? (
+                                    <>
+                                        <div class="basket__title"><span>Корзина</span> / {countTotal} шт.</div>
+                                        <div class="basket__list">
+                                            {bsList}
+                                        </div>
+                                        <p class="basket__sum">К оплате<br /> <span>{totalSum}</span> руб</p>
+                                        <div class="basket__button-buy">Оформить заказ</div>
+                                    </>
+                                ) : (
+                                    <>
+                                        <div class="basket__title"><span>Корзина</span></div>
+                                        <p class="basket__empty">В вашей корзине нет товара</p>
+                                    </>
+                                )}
+                            </div>
+                            <div class="catalog__bg-black" onClick={clickBasket}></div>
                         </div>
-                        <div class="catalog__bg-black" onClick={clickBasket}></div>
                     </>
                 }
             </header>
-            <div class="cover-img">
-                <div class="cover-img__name">
-                    KK <br />
-                    Shop
-                </div>
-                <div class="cover-img__img">
-                    <img src={cover} alt="" />
-                </div>
-            </div>
             <main class="main-content">
                 <Outlet />
             </main>
@@ -334,7 +385,7 @@ function HeaderMenu({ fun, w }) {
                 <div class="footer-top">
                     <div class="footer-top__column">
                         <div class="footer-top__img-logo">
-                            <img src="./img/image1.png" alt="" />
+                            <img src={f_logo} alt="" />
                         </div>
                         <p class="footer-top__text-contact">
                             8 490 000 00 00 <br />
@@ -366,33 +417,41 @@ function HeaderMenu({ fun, w }) {
                     <div class="footer-top__column">
                         <h4 class="footer-top__title">Информация</h4>
                         <ul class="footer-top__list">
-                            <li class="footer-top__item">
-                                <Link to="club">Клуб косметологов</Link>
-                            </li>
-                            <li class="footer-top__item">
-                                <Link to="delivery">Доставка и оплата</Link>
-                            </li>
-                            <li class="footer-top__item">
-                                <Link to="contacts">Контакты</Link>
-                            </li>
-                            <li class="footer-top__item">
-                                <Link to="blog">Блог</Link>
-                            </li>
+                            <Link to="club">
+                                <li class="footer-top__item">
+                                    Клуб косметологов
+                                </li>
+                            </Link>
+                            <Link to="delivery">
+                                <li class="footer-top__item">
+                                    Доставка и оплата
+                                </li>
+                            </Link>
+                            <Link to="contacts">
+                                <li class="footer-top__item">
+                                    Контакты
+                                </li>
+                            </Link>
+                            <Link to="blog">
+                                <li class="footer-top__item">
+                                    Блог
+                                </li>
+                            </Link>
                         </ul>
                     </div>
                     <div class="footer-top__column">
                         <h4 class="footer-top__title">Мы в социальных сетях</h4>
                         <div class="footer-top__messages">
-                            <img src="./img/social.svg" alt="" />
+                            <img src={f_social_img} alt="" />
                         </div>
                     </div>
                     <div class="footer-top__pay">
-                        <img src={img5} alt="" />
-                        <img src="./img/googlePay.svg" alt="" />
-                        <img src="./img/visa.svg" alt="" />
-                        <img src="./img/webmoney.svg" alt="" />
-                        <img src="./img/yandex.svg" alt="" />
-                        <img src="./img/master card.svg" alt="" />
+                        <img src={f_pay_img_1} alt="" />
+                        <img src={f_pay_img_2} alt="" />
+                        <img src={f_pay_img_3} alt="" />
+                        <img src={f_pay_img_4} alt="" />
+                        <img src={f_pay_img_5} alt="" />
+                        <img src={f_pay_img_6} alt="" />
                     </div>
                 </div>
                 <div class="footer-bottom">

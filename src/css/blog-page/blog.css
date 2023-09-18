@@ -1,5 +1,7 @@
 .blog {
     padding: 0 121px;
+    cursor: default;
+    animation: vis 0.3s linear;
 }
 .blog__title {
     font-family: "GilroyBold";
@@ -26,6 +28,10 @@
     font-size: 22px;
     line-height: 150%;
     color: #D785A1;
+    cursor: pointer;
+}
+.blog__name:hover {
+    text-decoration: underline;
 }
 .blog__description {
     color: #636363;

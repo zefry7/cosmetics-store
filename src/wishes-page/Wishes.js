@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Wishes(props) {
-    let l = window.location.href;
     let [countItems, setCountItems] = useState(0);
-
+    
+    let l = window.location.href;
     useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -12,8 +12,6 @@ function Wishes(props) {
         })
         setCountItems(props.list.length)
     }, [l])
-
-
 
     const deleteItem = (e) => {
         for (let x of props.list) {

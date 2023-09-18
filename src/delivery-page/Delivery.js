@@ -5,7 +5,6 @@ function Delivery() {
     const [rule, setRule] = useState(0);
 
     let l = window.location.href;
-
     useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -94,7 +93,7 @@ function Delivery() {
                                         **Быстрая доставка из магазина в день заказа действует во всех городах присутствия, кроме
                                         Москвы.
                                     </p>
-                                    <h5 class="service-rules__text-title">Интервалы доставки:</h5>
+                                    <h5 class="service-rules__text-normal">Интервалы доставки:</h5>
                                     <p class="service-rules__text-normal"> В Москве: заказы, оформленные до 21:00, доставляем на
                                         следующий день. Доступные интервалы доставки: 10:00 − 18:00, 10:00 − 14:00, 14:00 − 18:00, 18:00
                                         − 22:00. В Санкт-Петербурге: заказы, оформленные до 04:00, доставляем в этот же день. Доступные

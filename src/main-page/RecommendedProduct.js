@@ -17,7 +17,7 @@ function RecommendedProduct() {
 
     const imgList = [img1, img2, img3, img4]
 
-    const t = () => {
+    const listSliderItem = () => {
         let content = [];
         for (let i = 0; i < 8; ++i) {
             content.push(
@@ -52,7 +52,7 @@ function RecommendedProduct() {
 
     return (
         <Slider {...settings} className="slider">
-            {t()}
+            {listSliderItem()}
         </Slider>
     );
 }

@@ -1,6 +1,8 @@
 .contacts {
     padding: 0 121px;
     margin-bottom: 64px;
+    cursor: default;
+    animation: vis 0.3s linear;
 }
 .contacts__title {
     font-family: "GilroyBold";
@@ -42,6 +44,7 @@
     font-family: "GilroyNormal";
     font-size: 16px;
     line-height: 200%; 
+    cursor: pointer;
 }
 .contacts__text_normal {
     font-family: "GilroyNormal";

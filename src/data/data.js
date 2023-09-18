@@ -1,7 +1,7 @@
 import img1 from "../main-page/src-img/item-1.png";
 import img2 from "../main-page/src-img/item-2-big.png"
-import basketImg from "./Rectangle49.png"
-
+import basketImg1 from "./basket-item-1.png"
+import basketImg2 from "./basket-item-2.png"
 
 export const dataProduct = [
     {
@@ -14,6 +14,7 @@ export const dataProduct = [
 Экстракты семи чёрных плодов: шелковицы, графа, акантопанакса, сливы, черники и чёрной оливы — увлажняют волосы, делая их гладкими, здоровыми и сильными. Подходит для всех типов волос.`,
         type: "Гель для тела для похудения",
         img: img1,
+        basketImg: basketImg1,
         article: "19000000120",
         weight: "900 г",
         volume: "870 мл",
@@ -33,7 +34,7 @@ export const dataProduct = [
 Экстракты семи чёрных плодов: шелковицы, графа, акантопанакса, сливы, черники и чёрной оливы — увлажняют волосы, делая их гладкими, здоровыми и сильными. Подходит для всех типов волос.`,
         type: "Тоник для лица освежающий",
         img: img2,
-        basketImg: basketImg,
+        basketImg: basketImg2,
         article: "19000000618",
         weight: "1590 г",
         volume: "1500 мл",

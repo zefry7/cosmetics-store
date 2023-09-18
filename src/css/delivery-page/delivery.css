@@ -1,5 +1,7 @@
 .delivery {
     padding: 0 121px;
+    animation: vis 0.3s linear;
+    cursor: default;
 }
 .delivery__title {
     font-family: "GilroyBold";
@@ -105,6 +107,12 @@
     font-size: 18px;
     padding: 13px 0;
     text-align: center;
+    transition: all 0.1s linear 0s;
+    cursor: pointer;
+}
+.delivery-block-price__button-catalog:hover {
+    border-radius: 30px;
+    transition: all 0.1s linear 0s;
 }
 .service-rules__wrapper-list {
     padding-left: 15px;
@@ -148,9 +156,6 @@
 .service-rules__button:checked + div {
     background-color: black;
     color: white;
-}
-.service-rules__delivery-list {
-    
 }
 .service-rules__rule {
     padding-inline-start: 30px;
